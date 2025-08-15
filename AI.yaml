@@ -1,0 +1,40 @@
+name: BlogBackendAPI
+language: Java
+framework: Spring Boot
+version: 3.5.4
+entrypoint: com.gabriel.blog_backend.BlogBackendApplication
+entities:
+  - UsuarioEntity
+  - ArtigoEntity
+security:
+  authentication: JWT
+  password_hash: BCrypt
+roles:
+  - ADMINISTRADOR
+  - ANONIMO
+endpoints:
+  - path: /auth/register
+    method: POST
+    public: true
+    description: Cadastro de usuário
+  - path: /auth/login
+    method: POST
+    public: true
+    description: Login de usuário
+  - path: /artigo/todos_artigos
+    method: GET
+    public: true
+    description: Listar artigos
+  - path: /artigo/post_artigo
+    method: POST
+    role: ADMINISTRADOR
+    description: Criar artigo
+  - path: /artigo/editar_artigo/{id}
+    method: PUT
+    role: ADMINISTRADOR
+    description: Editar artigo
+  - path: /artigo/deletar_artigo/{id}
+    method: DELETE
+    role: ADMINISTRADOR
+    description: Deletar artigo
+

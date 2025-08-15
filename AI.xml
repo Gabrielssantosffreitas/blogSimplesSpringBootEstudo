@@ -1,0 +1,58 @@
+<ai>
+  <name>BlogBackendAPI</name>
+  <language>Java</language>
+  <framework>Spring Boot</framework>
+  <version>3.5.4</version>
+  <entrypoint>com.gabriel.blog_backend.BlogBackendApplication</entrypoint>
+  <entities>
+    <entity>UsuarioEntity</entity>
+    <entity>ArtigoEntity</entity>
+  </entities>
+  <security>
+    <authentication>JWT</authentication>
+    <password_hash>BCrypt</password_hash>
+  </security>
+  <roles>
+    <role>ADMINISTRADOR</role>
+    <role>ANONIMO</role>
+  </roles>
+  <endpoints>
+    <endpoint>
+      <path>/auth/register</path>
+      <method>POST</method>
+      <public>true</public>
+      <description>Cadastro de usuário</description>
+    </endpoint>
+    <endpoint>
+      <path>/auth/login</path>
+      <method>POST</method>
+      <public>true</public>
+      <description>Login de usuário</description>
+    </endpoint>
+    <endpoint>
+      <path>/artigo/todos_artigos</path>
+      <method>GET</method>
+      <public>true</public>
+      <description>Listar artigos</description>
+    </endpoint>
+    <endpoint>
+      <path>/artigo/post_artigo</path>
+      <method>POST</method>
+      <role>ADMINISTRADOR</role>
+      <description>Criar artigo</description>
+    </endpoint>
+    <endpoint>
+      <path>/artigo/editar_artigo/{id}</path>
+      <method>PUT</method>
+      <role>ADMINISTRADOR</role>
+      <description>Editar artigo</description>
+    </endpoint>
+    <endpoint>
+      <path>/artigo/deletar_artigo/{id}</path>
+      <method>DELETE</method>
+      <role>ADMINISTRADOR</role>
+      <description>Deletar artigo</description>
+    </endpoint>
+  </endpoints>
+</ai>
+
