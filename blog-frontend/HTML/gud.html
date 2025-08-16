@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <link rel="stylesheet" href="/CSs/reset.css">
+    <link rel="stylesheet" href="/CSs/base.css">
+    <link rel="stylesheet" href="/CSs/gud.css">
+    <link rel="shortcut icon" href="img/blog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end</title>
+</head>
+<body>
+    <header>
+       <h1><a href="/index.html">F_END</a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Home </a>
+                    <a href="/HTML/artigos.html"> artigos </a>
+                    <a href="/HTML/cadastro.html"> cadastro </a>
+                    <a href="/HTML/gud.html"> GUD </a>
+                    <a href="/HTML/login.html"> login </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Criar</h1>
+            <form>
+                <label for="titulo"> Titulo </label>
+                <input type="text" name="titulo" id="titulo" required placeholder="titulo">
+                <label for="resumo"> resumo </label>
+                <input type="text" name="resumo" id="resumo" required placeholder="resumo">
+                <label for="conteudo">conteudo</label>
+                <textarea name="conteudo" id="conteudo" rows="10" cols="50"></textarea>
+               <input type="submit" value="Criar" id="criar">
+            </form>
+        </section>
+        <section>
+            <h1>Editar</h1>
+            <form>
+                <label for="id"> id do artigo </label>
+                <input type="number" name="id" id="id" required placeholder="id do artigo">
+                <label for="titulo"> Titulo </label>
+                <input type="text" name="titulo" id="titulo" required placeholder="titulo">
+                <label for="resumo"> resumo </label>
+                <input type="text" name="resumo" id="resumo" required placeholder="resumo">
+                <label for="conteudo">conteudo</label>
+                <textarea name="conteudo" id="conteudo" rows="10" cols="50"></textarea>
+                <input type="submit" value="Editar" id="editar">
+            </form>
+        </section>
+        <section>
+            <h1>Deletar</h1>
+            <form>
+                <label for="id"> id do artigo </label>
+                <input type="number" name="id" id="id" required placeholder="id do artigo">
+                <input type="submit" value="Deletar" id="deletar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> feito por gabriel para testar o meu back end </p>
+    </footer>
+<script src="/JS/gud.js"></script>
+</body>
+</html>

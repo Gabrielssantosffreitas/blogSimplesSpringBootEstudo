@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  
+    <link rel="stylesheet" href="/CSs/reset.css">
+    <link rel="stylesheet" href="/CSs/base.css">
+    <link rel="stylesheet" href="/CSs/cadastro.css">
+    <link rel="shortcut icon" href="img/blog.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end</title>
+</head>
+<body>
+    <header>
+       <h1><a href="/index.html">F_END</a></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Home </a>
+                    <a href="HTML/artigos.html"> artigos </a>
+                    <a href="/HTML/cadastro.html"> cadastro </a>
+                    <a href="/HTML/gud.html"> GUD </a>
+                        <a href="/HTML/login.html"> login </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section>
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="DIGITE SEU NOME" required>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="DIGITE SEU USERNAME" required>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="DIGITE SUA SENHA">
+                <label for="role">Role</label>
+                <select name="role" id="role">
+                    <option value="0">escolha a sua permissao</option>
+                    <option value="1">ADMINISTRADOR</option>
+                    <option value="0">ANONIMO</option>
+                </select>
+                <input type="submit" value="Cadastrar" id="cadastrar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> feito por gabriel para testar o meu back end </p>
+    </footer>
+</body>
+<script src="/JS/cadastro.js"></script>
+</html>
